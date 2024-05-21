@@ -21,18 +21,18 @@ public:
     void add(int d) { // 삽입함수
         Node* n = new Node(d); // 새로운 노드 생성
         if (!head) { // 헤드 포인터가 "null"일 경우(공백 리스트)
-            head = n; // 해드 포인터에 새로운 노드 포인터 저장(해드 포인터가 새로운 노드를 가리키게 됨)
-        } else { // 헤드 포인터가 "null"이 아닐 경우(공백 리스트x)
+            head = n; // 헤드 포인터에 새로운 노드 포인터 저장(헤드 포인터가 새로운 노드를 가리키게 됨)
+        } else { // 헤드 포인터가 "null"이 아닐 경우(공백 리스트 x)
             Node* t = head; // 삽입할 위치의 선행 노드(끝 노드)
-            while (t->next) // 끝 노드 까지 순회 (ㅁ-ㅁ-ㅁ(t)-x)
+            while (t->next) // 끝 노드까지 순회 (ㅁ-ㅁ-ㅁ(t)-x)
                 t = t->next; // 다음 노드로 이동
-            t->next = n; // 끝노드에 새로운 노드를 연결
+            t->next = n; // 끝 노드에 새로운 노드를 연결
         }
     }
 
     void print() {
         Node* t = head; // 순회할 노드 포인터
-        while (t) { // 끝 노드 까지 순회 (ㅁ-ㅁ-ㅁ-x(t))
+        while (t) { // 끝 노드까지 순회 (ㅁ-ㅁ-ㅁ-x(t))
             std::cout << t->data << " "; // 데이터를 출력
             t = t->next; // 다음 노드로 이동
         }
@@ -40,7 +40,7 @@ public:
     }
 
     ~LinkedList() { // 소멸자
-        while (head) { // 끝 노드 까지 순회 (ㅁ-ㅁ-ㅁ-x(t))
+        while (head) { // 끝 노드까지 순회 (ㅁ-ㅁ-ㅁ-x(t))
             Node* t = head; // 삭제할 노드 포인터
             head = head->next; // 다음 노드로 이동
             delete t; // 삭제할 노드 삭제
