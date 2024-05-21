@@ -10,7 +10,7 @@ $$
 요소들은 모두 피벗의 왼쪽으로 옮겨지므로 비균등하게 분할된다.
 ```
 
-## [사진]
+![](https://github.com/Peg-board/CPP_QuickSort_and_LinkedList/blob/master/QuickSort/%ED%94%84%EB%A0%88%EC%A0%A0%ED%85%8C%EC%9D%B4%EC%85%98final.gif?raw=true)
 
 ```cpp
 #include <iostream>
